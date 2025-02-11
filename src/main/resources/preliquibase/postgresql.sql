@@ -1,0 +1,1 @@
+create schema if not exists monitor_sensors_schema;
