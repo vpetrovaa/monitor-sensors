@@ -1,7 +1,7 @@
 package com.agsr.monitor_sensors.web.mapper;
 
 import com.agsr.monitor_sensors.domain.monitor.Sensor;
-import com.agsr.monitor_sensors.web.dto.SensorDto;
+import com.agsr.monitor_sensors.web.dto.monitor.SensorDto;
 import org.mapstruct.Mapper;
 
 import java.util.List;

@@ -1,6 +1,7 @@
 package com.agsr.monitor_sensors.web.controller;
 
 import com.agsr.monitor_sensors.domain.exception.IllegalArgumentException;
+import com.agsr.monitor_sensors.domain.exception.ResourceAlreadyExistsException;
 import com.agsr.monitor_sensors.domain.exception.ResourceDoesNotExistException;
 import com.agsr.monitor_sensors.web.dto.ResponseDto;
 import lombok.extern.slf4j.Slf4j;
@@ -40,6 +41,13 @@ public class ApiControllerAdvice {
     @ExceptionHandler(ResourceDoesNotExistException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseDto handleResourceDoesNotExistException(ResourceDoesNotExistException ex) {
+        log.error(ex.getMessage());
+        return new ResponseDto(List.of(ex.getMessage()));
+    }
+
+    @ExceptionHandler(ResourceAlreadyExistsException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseDto handleResourceAlreadyExistsException(ResourceAlreadyExistsException ex) {
         log.error(ex.getMessage());
         return new ResponseDto(List.of(ex.getMessage()));
     }

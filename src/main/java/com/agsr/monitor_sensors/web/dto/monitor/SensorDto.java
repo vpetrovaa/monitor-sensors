@@ -1,4 +1,4 @@
-package com.agsr.monitor_sensors.web.dto;
+package com.agsr.monitor_sensors.web.dto.monitor;
 
 import com.agsr.monitor_sensors.web.validator.ValidRange;
 import jakarta.validation.constraints.Min;
