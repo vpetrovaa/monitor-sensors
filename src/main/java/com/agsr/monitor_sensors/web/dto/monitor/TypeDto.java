@@ -1,4 +1,4 @@
-package com.agsr.monitor_sensors.web.dto;
+package com.agsr.monitor_sensors.web.dto.monitor;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.agsr.monitor_sensors.web.mapper;
 
 import com.agsr.monitor_sensors.domain.monitor.Unit;
-import com.agsr.monitor_sensors.web.dto.UnitDto;
+import com.agsr.monitor_sensors.web.dto.monitor.UnitDto;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring", uses = SensorMapper.class)

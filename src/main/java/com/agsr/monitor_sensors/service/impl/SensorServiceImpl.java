@@ -54,6 +54,11 @@ public class SensorServiceImpl implements SensorService {
     }
 
     @Override
+    public List<Sensor> findByNameOrModel(String searchText) {
+        return sensorRepository.findByNameOrModel(searchText);
+    }
+
+    @Override
     public Sensor update(Long id, Sensor sensor) {
         Sensor sensorFromDb = findById(id);
         Type type = typeService.findById(sensor.getType().getId());

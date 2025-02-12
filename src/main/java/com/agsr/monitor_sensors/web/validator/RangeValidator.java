@@ -1,6 +1,6 @@
 package com.agsr.monitor_sensors.web.validator;
 
-import com.agsr.monitor_sensors.web.dto.SensorDto;
+import com.agsr.monitor_sensors.web.dto.monitor.SensorDto;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 

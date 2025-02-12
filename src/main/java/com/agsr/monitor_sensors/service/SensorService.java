@@ -12,6 +12,8 @@ public interface SensorService {
 
     List<Sensor> findAll();
 
+    List<Sensor> findByNameOrModel(String searchText);
+
     Sensor update(Long id, Sensor sensor);
 
     void delete(Long id);

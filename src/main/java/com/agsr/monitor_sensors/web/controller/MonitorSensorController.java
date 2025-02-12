@@ -2,7 +2,7 @@ package com.agsr.monitor_sensors.web.controller;
 
 import com.agsr.monitor_sensors.domain.monitor.Sensor;
 import com.agsr.monitor_sensors.service.SensorService;
-import com.agsr.monitor_sensors.web.dto.SensorDto;
+import com.agsr.monitor_sensors.web.dto.monitor.SensorDto;
 import com.agsr.monitor_sensors.web.mapper.SensorMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -43,6 +44,12 @@ public class MonitorSensorController {
     @GetMapping
     public List<SensorDto> findAll() {
         List<Sensor> sensors = sensorService.findAll();
+        return sensorMapper.toDtoList(sensors);
+    }
+
+    @GetMapping("/search")
+    public List<SensorDto> findByNameOrModel(@RequestParam String searchText) {
+        List<Sensor> sensors = sensorService.findByNameOrModel(searchText);
         return sensorMapper.toDtoList(sensors);
     }
 
