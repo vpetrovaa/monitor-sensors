@@ -4,6 +4,7 @@ import com.agsr.monitor_sensors.domain.exception.IllegalArgumentException;
 import com.agsr.monitor_sensors.domain.exception.ResourceAlreadyExistsException;
 import com.agsr.monitor_sensors.domain.exception.ResourceDoesNotExistException;
 import com.agsr.monitor_sensors.web.dto.ResponseDto;
+import io.swagger.v3.oas.annotations.Hidden;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Hidden
 @RestControllerAdvice
 public class ApiControllerAdvice {
 
